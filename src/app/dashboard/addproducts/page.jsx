@@ -75,7 +75,7 @@ export default function AddProduct() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-500 text-black py-2 rounded hover:bg-green-600 transition"
+          className="w-full bg-green-500 text-black py-2 rounded hover:bg-green-600 transition font-semibold"
         >
           {loading ? "Adding..." : "Add Product"}
         </button>
