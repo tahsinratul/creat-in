@@ -51,7 +51,7 @@ export default async function ProductDetails({ params }) {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/products"
-              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+              className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition font-semibold"
             >
               Back to Products
             </Link>
