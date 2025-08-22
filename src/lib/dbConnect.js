@@ -3,7 +3,7 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 let client;
 let clientPromise;
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
 const options = {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -12,7 +12,7 @@ const options = {
   },
 };
 
-if (!uri) throw new Error("MONGODB_URI is missing");
+if (!uri) throw new Error("NEXT_PUBLIC_MONGODB_URI is missing");
 
 if (process.env.NODE_ENV === "development") {
   if (!global._mongoClientPromise) {

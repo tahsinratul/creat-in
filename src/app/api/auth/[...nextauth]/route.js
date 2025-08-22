@@ -20,10 +20,8 @@ export const authOptions = {
         const usersCollection = await dbConnect("users");
         const user = await usersCollection.findOne({ email: credentials.email });
         if (!user) throw new Error("No user found");
-
         const isValid = await bcrypt.compare(credentials.password, user.password);
         if (!isValid) throw new Error("Incorrect password");
-
         return { id: user._id.toString(), name: user.name, email: user.email };
       },
     }),
@@ -33,5 +31,6 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
+// handler for Next.js 13 app router
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

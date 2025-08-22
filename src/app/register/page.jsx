@@ -37,10 +37,10 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-100 via-white to-green-100 px-4">
+    <div className="h-[65vh] flex items-center justify-center bg-gradient-to-r  px-4">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <h1 className="text-3xl font-extrabold mb-6 text-center text-gray-800">
-          Create Account ✨
+          Create Account
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
