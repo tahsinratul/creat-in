@@ -84,7 +84,7 @@ export default function RegisterPage() {
         <div className="my-6 text-center text-gray-500 font-medium">OR</div>
 
         <button
-          onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+          onClick={() => signIn("google", { callbackUrl: "/products" })}
           className="w-full flex items-center justify-center gap-3 border py-3 rounded-lg hover:bg-gray-100 transition text-lg font-semibold shadow-sm"
         >
           <FcGoogle size={28} /> Sign up with Google
