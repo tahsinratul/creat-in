@@ -6,19 +6,38 @@ import Link from "next/link";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(
-      `Name: ${form.name}, Email: ${form.email}, Password: ${form.password} (not real register)`
-    );
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        setMessage("User registered! You can now login.");
+        setForm({ name: "", email: "", password: "" });
+      } else {
+        setMessage(data.message || "Registration failed.");
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage("Something went wrong.");
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-100 via-white to-green-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-100 via-white to-green-100 px-4">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
         <h1 className="text-3xl font-extrabold mb-6 text-center text-gray-800">
           Create Account ✨
@@ -59,6 +78,8 @@ export default function RegisterPage() {
             Register
           </button>
         </form>
+
+        {message && <p className="text-center mt-2 text-red-600">{message}</p>}
 
         <div className="my-6 text-center text-gray-500 font-medium">OR</div>
 
