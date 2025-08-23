@@ -104,7 +104,7 @@ export default function Navbar() {
             <span className="font-semibold">{session.user.name}</span>
             <button
               onClick={() => signOut({ callbackUrl: "/" })}
-              className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition font-semibold"
+              className="bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 transition font-semibold"
             >
               Logout
             </button>
@@ -113,7 +113,7 @@ export default function Navbar() {
         {!session && (
           <Link
             href="/login"
-            className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition font-semibold"
+            className="bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 transition font-semibold"
           >
             Login
           </Link>

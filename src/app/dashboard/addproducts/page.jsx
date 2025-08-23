@@ -38,14 +38,14 @@ export default function AddProduct() {
   return (
     <div className="max-w-2xl mx-auto py-12 h-[65vh] px-4">
       <h1 className="text-3xl font-bold mb-6 text-center">Add a Product</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-xl shadow-md">
+      <form onSubmit={handleSubmit} className="space-y-4 bg-black p-6 rounded-xl shadow-md">
         <input
           name="name"
           placeholder="Name"
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded bg-white"
         />
         <textarea
           name="description"
@@ -53,7 +53,7 @@ export default function AddProduct() {
           value={form.description}
           onChange={handleChange}
           required
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded bg-white"
         />
         <input
           name="price"
@@ -62,7 +62,7 @@ export default function AddProduct() {
           value={form.price}
           onChange={handleChange}
           required
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded bg-white"
         />
         <input
           name="image"
@@ -70,7 +70,7 @@ export default function AddProduct() {
           value={form.image}
           onChange={handleChange}
           required
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded bg-white"
         />
         <button
           type="submit"
