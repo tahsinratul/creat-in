@@ -6,7 +6,7 @@ import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-12 px-6 sm:px-8 md:px-12 font-display mt-5">
-      <div className="w-[81%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 text-sm">
+      <div className="md:w-[81%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 text-sm">
 
         {/* Logo & Tagline */}
         <div>
