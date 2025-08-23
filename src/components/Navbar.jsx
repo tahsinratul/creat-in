@@ -19,8 +19,8 @@ export default function Navbar() {
 
   const linkClass = (href) =>
     pathname === href
-      ? "text-green-600 font-bold border-b-2 border-green-600"
-      : "text-gray-700 hover:text-green-600";
+      ? "text-green-500 font-bold underline"
+      : "text-black";
 
   return (
     <div className="navbar bg-white px-4 md:px-55 flex justify-between items-center py-4">
@@ -77,7 +77,7 @@ export default function Navbar() {
                     signOut({ callbackUrl: "/" });
                     setDropdownOpen(false);
                   }}
-                  className="block w-full text-left px-4 py-2 text-red-500 hover:bg-gray-100"
+                  className="block w-full text-left px-4 py-2 text-red-500"
                 >
                   Logout ({session.user.name})
                 </button>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="/login"
-                  className="block px-4 py-2 text-green-500 hover:bg-gray-100"
+                  className="block px-4 py-2 text-green-500"
                   onClick={() => setDropdownOpen(false)}
                 >
                   Login
