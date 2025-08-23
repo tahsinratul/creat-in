@@ -24,8 +24,8 @@ export default function Navbar() {
 
   return (
     <div className="navbar bg-white px-4 md:px-55 flex justify-between items-center py-4">
-      <div className="flex items-center gap-2">
-        <p className="text-2xl font-bold">Creat</p>
+      <div className="flex items-center">
+        <p className="text-2xl font-bold pb-1">Creat</p>
         <Image src="/assets/logo.png" width={50} height={50} alt="Logo" />
         <p className="text-2xl font-bold">In</p>
       </div>
